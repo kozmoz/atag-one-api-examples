@@ -14,7 +14,7 @@ import org.juurlink.atagone.exceptions.NotAuthorizedException;
  * Automatic discovery of the thermostat is skipped, the address and device id have to be known in advanced.
  */
 @SuppressWarnings("Duplicates")
-public class ReadAtagOneLocalAdvanced1 {
+public class ReadAtagOneLocalAdvanced3 {
 
 	/**
 	 * Main start method.

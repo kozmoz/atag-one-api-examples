@@ -12,7 +12,7 @@ import org.juurlink.atagone.exceptions.NotAuthorizedException;
  * We only use the automatic discovery of the thermostat to get the IP address and device id.
  */
 @SuppressWarnings("Duplicates")
-public class ReadAtagOneLocalAdvanced2 {
+public class ReadAtagOneLocalAdvanced4 {
 
 	/**
 	 * Main start method.
