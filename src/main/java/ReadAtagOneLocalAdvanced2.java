@@ -11,7 +11,7 @@ import org.juurlink.atagone.exceptions.NotAuthorizedException;
 /**
  * Example class how to use the ATAG One API library in Java and connect to thermostat on the local network.
  * <p/>
- * Automatic discovery of the thermostat is skipped, the address and device id have to be known in advanced.
+ * Automatic discovery of the thermostat is skipped, the address and device id have to be known in advance.
  */
 @SuppressWarnings("Duplicates")
 public class ReadAtagOneLocalAdvanced2 {
