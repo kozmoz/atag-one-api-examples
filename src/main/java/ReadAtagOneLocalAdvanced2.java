@@ -1,10 +1,9 @@
 import java.io.IOException;
-import java.net.InetAddress;
 import java.util.Map;
 
 import org.juurlink.atagone.AtagOneConnectorInterface;
 import org.juurlink.atagone.AtagOneLocalConnector;
-import org.juurlink.atagone.domain.AtagOneInfo;
+import org.juurlink.atagone.domain.Configuration;
 import org.juurlink.atagone.exceptions.AccessDeniedException;
 import org.juurlink.atagone.exceptions.NotAuthorizedException;
 
@@ -21,14 +20,13 @@ public class ReadAtagOneLocalAdvanced2 {
 	 */
 	public static void main(String[] args) throws IOException {
 
-		// To connect to configured thermostat, supply the IP address and device id of the ATAG One thermostat..
-		AtagOneInfo atagOneInfo = AtagOneInfo.builder()
-			.deviceAddress(InetAddress.getByName("10.0.100.50"))
-			.deviceId("6808-1401-3109_15-30-001-123")
+		// To connect thermostat directly, supply the network address of the ATAG One thermostat...
+		Configuration configuration = Configuration.builder()
+			.hostName("10.0.100.50")
 			.build();
 
 		// Create local connector.
-		AtagOneConnectorInterface atagOneConnector = new AtagOneLocalConnector(atagOneInfo);
+		AtagOneConnectorInterface atagOneConnector = new AtagOneLocalConnector(configuration);
 
 		try {
 			// Login to get authorization.

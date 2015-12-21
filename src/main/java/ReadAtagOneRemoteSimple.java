@@ -3,7 +3,7 @@ import java.util.Map;
 
 import org.juurlink.atagone.AtagOneConnectorInterface;
 import org.juurlink.atagone.AtagOneRemoteConnector;
-import org.juurlink.atagone.domain.PortalCredentials;
+import org.juurlink.atagone.domain.Configuration;
 
 /**
  * Example class how to use the ATAG One API library in Java, connect to remote thermostat via the ATAG ONE Portal and get diagnostics.
@@ -17,13 +17,13 @@ public class ReadAtagOneRemoteSimple {
 	public static void main(String[] args) throws IOException {
 
 		// ATAG One Portal credentials.
-		PortalCredentials portalCredentials = PortalCredentials.builder()
-			.emailAddress("email@gmail.com")
+		Configuration configuration = Configuration.builder()
+			.email("email@gmail.com")
 			.password("p6ssw0rd")
 			.build();
 
 		// Create local or remote connector.
-		AtagOneConnectorInterface atagOneConnector = new AtagOneRemoteConnector(portalCredentials);
+		AtagOneConnectorInterface atagOneConnector = new AtagOneRemoteConnector(configuration);
 
 		// First login.
 		atagOneConnector.login();
